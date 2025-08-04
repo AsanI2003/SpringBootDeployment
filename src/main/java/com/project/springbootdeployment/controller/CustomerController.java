@@ -8,10 +8,11 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/request")
+@CrossOrigin
 @RequiredArgsConstructor
 public class CustomerController {
 
-    private CustomerService customerService;
+    private final CustomerService customerService;
     @GetMapping
     public String getCustomer() {
         return "sucess";
